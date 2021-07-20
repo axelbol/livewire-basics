@@ -36,6 +36,7 @@ class PostCreate extends Component
             'message' => $this->message,
         ]);
 
+        sleep(2);
         // $this->resetForm();
         $this->reset();
 
