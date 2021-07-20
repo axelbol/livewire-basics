@@ -17,7 +17,7 @@
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link href="{{ route('post.create') }}" :active="request()->routeIs('post.create')">
+                    <x-nav-link href="{{ route('posts.create') }}" :active="request()->routeIs('post.create')">
                         {{ __('Post') }}
                     </x-nav-link>
                 </div>

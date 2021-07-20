@@ -16,14 +16,27 @@ class PostCreate extends Component
         return view('livewire.post-create');
     }
 
+    protected $rules = [
+        'title' => ['required', 'min:4'],
+        'slug' => 'required',
+        'message' => 'required'
+    ];
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
     public function submitForm()
     {
+        $this->validate();
         Post::create([
             'title' => $this->title,
             'slug' => $this->slug,
             'message' => $this->message,
         ]);
 
+        // $this->resetForm();
         $this->reset();
     }
 

@@ -22,7 +22,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::resource('/post', PostController::class)
+Route::resource('/posts', PostController::class)
     ->except(['index', 'show', 'edit', 'update', 'destroy'])
     ->middleware(['auth']);
 
