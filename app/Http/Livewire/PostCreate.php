@@ -38,6 +38,8 @@ class PostCreate extends Component
 
         // $this->resetForm();
         $this->reset();
+
+        session()->flash('message', 'Post saved succesfully!');
     }
 
     private function resetForm()
